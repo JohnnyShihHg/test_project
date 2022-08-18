@@ -10,7 +10,7 @@ class InspiringController extends Controller
 {
     public function inspire()
     {
-        /* 建立實例 */
+        /* 取用 InspiringService Class 建立實例使用內部方法 */
         return (new InspiringService())->inspire();
     }
 }
