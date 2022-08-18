@@ -14,3 +14,7 @@
 Route::get('/hello_world', function () {
     return view('HelloWorld');
 });
+
+Route::get('/about_us', function () {
+    return view('about_us',['name'=>'test_project']);
+});
