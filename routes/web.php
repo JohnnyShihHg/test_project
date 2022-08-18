@@ -15,6 +15,9 @@ Route::get('/hello_world', function () {
     return view('HelloWorld');
 });
 
+/* 練習樣板 */
 Route::get('/about_us', function () {
     return view('about_us',['name'=>'test_project']);
 });
+/* 練習名言機器人 */
+Route::get('/inspire', 'InspiringController@inspire');
