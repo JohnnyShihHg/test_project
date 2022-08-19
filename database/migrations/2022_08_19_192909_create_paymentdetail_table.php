@@ -13,7 +13,7 @@ class CreatePaymentdetailTable extends Migration
      */
     public function up()
     {
-        Schema::create('paymentdetail', function (Blueprint $table) {
+        Schema::create('payment_details', function (Blueprint $table) {
             $table->bigIncrements('pd_id');
             $table->string('detail');
             $table->timestamps();

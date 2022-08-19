@@ -13,7 +13,7 @@ class CreateProductcategoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('productcategory', function (Blueprint $table) {
+        Schema::create('product_categorys', function (Blueprint $table) {
             $table->bigIncrements('pc_id');
             $table->string('product_name');
             $table->double('price');

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductTable extends Migration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateProductTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->bigIncrements('p_id');
-            $table->string('size');
-            $table->string('color');
-            $table->integer('amount');
+        /* Schema 接收兩個參數 第一個為表名 第二個為(閉包)定義資料表的物件 */
+        Schema::create('users', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->integer('phone');
+            $table->string('e-mail');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateProductTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product');
+        Schema::dropIfExists('users');
     }
 }

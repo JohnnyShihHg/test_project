@@ -13,7 +13,7 @@ class CreatePaymentTable extends Migration
      */
     public function up()
     {
-        Schema::create('payment', function (Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->bigIncrements('pm_id');
             $table->integer('total');
             $table->string('paymentstatus');
