@@ -20,4 +20,5 @@ Route::get('/about_us', function () {
     return view('about_us',['name'=>'test_project']);
 });
 /* 練習名言機器人 */
+/* 調用 action 的方法在之後的版本有所變動 */
 Route::get('/inspire', 'InspiringController@inspire');
