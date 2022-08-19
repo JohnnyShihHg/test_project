@@ -16,7 +16,7 @@ class CreateProductcategoryTable extends Migration
         Schema::create('product_categorys', function (Blueprint $table) {
             $table->bigIncrements('pc_id');
             $table->string('product_name');
-            $table->double('price');
+            $table->decimal('price');
             $table->timestamps();
         });
     }
