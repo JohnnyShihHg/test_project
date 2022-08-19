@@ -14,7 +14,7 @@ class CreatePaymentdetailTable extends Migration
     public function up()
     {
         Schema::create('payment_details', function (Blueprint $table) {
-            $table->bigIncrements('pd_id');
+            $table->bigIncrements('id');
             $table->string('detail');
             $table->timestamps();
             $table->softDeletes();
