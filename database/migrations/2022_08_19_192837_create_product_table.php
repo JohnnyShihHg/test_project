@@ -19,6 +19,8 @@ class CreateProductTable extends Migration
             $table->string('color');
             $table->integer('amount');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

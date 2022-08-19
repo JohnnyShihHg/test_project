@@ -17,6 +17,8 @@ class CreatePaymentdetailTable extends Migration
             $table->bigIncrements('pd_id');
             $table->string('detail');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

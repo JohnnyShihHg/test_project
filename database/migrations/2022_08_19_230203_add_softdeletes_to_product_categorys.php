@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductcategoryTable extends Migration
+class AddSoftdeletesToProductCategorys extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreateProductcategoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_categorys', function (Blueprint $table) {
-            $table->bigIncrements('pc_id');
-            $table->string('product_name');
-            $table->decimal('price');
-            $table->timestamps();
-            $table->softDeletes();
-
+        Schema::table('product_categorys', function (Blueprint $table) {
+            //
         });
     }
 
@@ -30,6 +25,8 @@ class CreateProductcategoryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('productcategory');
+        Schema::table('product_categorys', function (Blueprint $table) {
+           $table->dropSoftDeletes();
+        });
     }
 }

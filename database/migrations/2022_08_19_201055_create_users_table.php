@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->integer('phone');
             $table->string('e-mail');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

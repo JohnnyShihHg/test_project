@@ -18,6 +18,8 @@ class CreatePaymentTable extends Migration
             $table->integer('total');
             $table->string('paymentstatus');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 
