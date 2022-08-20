@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->integer('phone');
-            $table->string('e-mail');
+            $table->string('email');
             $table->timestamps();
             $table->softDeletes();
         });
