@@ -5,7 +5,7 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Payment_Model extends Model
+class PaymentModel extends Model
 {
     use SoftDeletes;
     public function CreatePayment()

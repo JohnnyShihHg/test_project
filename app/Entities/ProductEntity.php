@@ -5,7 +5,7 @@ namespace App\Entities;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Product extends Model
+class ProductEntity extends Model
 {
     protected $table = 'products';
 }

@@ -3,6 +3,8 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Entities\UserEntity;
+
+
 use Faker\Generator as Faker;
 
 /*
