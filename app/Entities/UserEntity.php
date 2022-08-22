@@ -5,8 +5,11 @@ namespace App\Entities;
 use Illuminate\Database\Eloquent\Model;
 
 
-class UserEntity extends Model
+class UserEntity  extends Model
+
 {
+
+
     protected $table = 'users';
 
     protected $fillable = [
