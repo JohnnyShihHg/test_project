@@ -8,6 +8,8 @@
     Seeder測試成功.
     成功透過 Service 連接 Model 調用方法，也從 Controller 直接使用 Service 注入的方法成功.
     待完成指定API操作和資料庫關聯.
-
+## [2022/08/23] 更新
+    成功透過 with 取得 Model 間的關係.
+    待設定完成所有 Model 的關係 就建立 API.
 
 
