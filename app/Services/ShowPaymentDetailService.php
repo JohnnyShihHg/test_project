@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\Model\ProductModel;
 
-class ProductService 
+class ShowPaymentDetailService 
 {
 
     private $product;

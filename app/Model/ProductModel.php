@@ -17,9 +17,9 @@ class ProductModel extends ProductEntity
         例如商品種類叫做飲料，會有紅茶綠茶等商品，
         而紅茶只會有一個商品種類叫做飲料。
     */
-    public function MyProduct()
+    public function ProductCategory()
     {
-        return $this->belongsTo(App\Model\ProductCategoryModel::class);
+        return $this->belongsTo(ProductCategoryModel::class,'product_category_model_id');
     }
 
     /* 理應接收 http request 生成資料*/
@@ -35,5 +35,9 @@ class ProductModel extends ProductEntity
     public function show()
     {
         return ProductEntity::all();
+    }
+
+    public function GetAllProducts(){
+        return ProductModel::with('ProductCategory')->get();
     }
 }
