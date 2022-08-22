@@ -1,11 +1,13 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Entities\PaymentDetailEntity;
 
-class PaymentDetailModel extends Model
+class PaymentDetailModel extends PaymentDetailEntity
 {
+    protected $table = 'payment_details';
+
     public function MyPayment(){
         return $this->belongsTo('App\Model\PaymentModel');
     }

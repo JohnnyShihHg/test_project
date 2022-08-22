@@ -2,7 +2,8 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Entities\UserEntity;
+// use App\Entities\UserEntity;
+use App\Model\UserModel;
 
 
 use Faker\Generator as Faker;
@@ -18,7 +19,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(UserEntity::class, function (Faker $faker) {
+$factory->define(UserModel::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->freeEmail,

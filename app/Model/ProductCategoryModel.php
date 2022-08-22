@@ -2,27 +2,22 @@
 
 namespace App\Model;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Entities\ProductCategoryEntity;
 
-class ProductCategoryModel extends Model
+class ProductCategoryModel extends ProductCategoryEntity
 {
     use SoftDeletes;
+    protected $table = 'product_categorys';
 
-    public function MyProduct()
+    /* 可擁有多個物件 */
+    public function Product()
     {
-        return $this->hasOne('App\Model\ProductModel');
-        // ProductCategoryEntity::MyProduct();
+        return $this->hasMany(App\Model\ProductModel::class);
     }
 
-    public function CreateProduct($size, $color, $amount)
+    public function CreateProductCategory($data)
     {
-        $data = [
-            'size' => $size,
-            'color' => $color,
-            'amount' => $amount,
-        ];
         ProductCategoryEntity::create($data);
     }
 }

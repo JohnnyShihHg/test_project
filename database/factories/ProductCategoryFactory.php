@@ -3,11 +3,11 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Entities\ProductCategoryEntity;
-
+use App\Model\ProductCategoryModel;
 
 use Faker\Generator as Faker;
 
-$factory->define(ProductCategoryEntity::class, function (Faker $faker) {
+$factory->define(ProductCategoryModel::class, function (Faker $faker) {
 
     $choose = [
         'apple',

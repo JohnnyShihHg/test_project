@@ -2,10 +2,9 @@
 
 namespace App\Model;
 
-use Illuminate\Database\Eloquent\Model;
 use App\Entities\UserEntity;
 
-class UserModel extends Model
+class UserModel extends UserEntity
 {
     public function CreateUser($name, $phone, $email,$password)
     {
