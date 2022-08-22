@@ -1,8 +1,7 @@
 <?php
 
-use App\Entities\UserEntity;
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 
 class UserSeeder extends Seeder
 {
@@ -14,7 +13,8 @@ class UserSeeder extends Seeder
     public function run()
     {
         /* 可以直接用 Factory 的資料來創建 */
-        factory(App\Entities\UserEntity::class)->create();
+        /* laravel6 語法 */
+        factory(App\Entities\UserEntity::class,2)->create();
         
         // App\Entities\UserEntity::factory(3)->create(); ← Laravel8
 
