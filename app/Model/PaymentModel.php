@@ -8,9 +8,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class PaymentModel extends Model
 {
     use SoftDeletes;
-    public function CreatePayment()
+    public function MyPaymentDetail()
     {
+        return $this->hasMany('App\Model\PaymentModel');
 
     }
-
+    public function CreatePayment()
+    {
+    }
 }
