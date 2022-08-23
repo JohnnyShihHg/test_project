@@ -14,7 +14,8 @@ class AddPaymentdeatil extends Migration
     public function up()
     {
         Schema::table('payment_details', function (Blueprint $table) {
-            $table->integer('payment_id')->nullable();
+            $table->integer('payment_model_id')->nullable();
+            $table->integer('product');
         });
     }
 

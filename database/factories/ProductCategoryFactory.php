@@ -10,11 +10,10 @@ use Faker\Generator as Faker;
 $factory->define(ProductCategoryModel::class, function (Faker $faker) {
 
     $choose = [
-        'apple',
-        'banana',
-        'orange',
+        '飲料',
+        '水果',
     ];
-    $key = rand(0, 2);
+    $key = rand(0, 1);
     return [
         'product_name' => "$choose[$key]",
         'price' => $faker->numberBetween(10,100),

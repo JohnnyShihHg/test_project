@@ -22,6 +22,7 @@ class ProductModel extends ProductEntity
         return $this->belongsTo(ProductCategoryModel::class,'product_category_model_id');
     }
 
+
     /* 理應接收 http request 生成資料*/
     public function CreateProduct($data)
     {

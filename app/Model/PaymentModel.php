@@ -10,11 +10,19 @@ class PaymentModel extends PaymentEntity
     use SoftDeletes;
     protected $table = 'payments';
 
-    public function MyPaymentDetail()
-    {
-        return $this->hasMany('App\Model\PaymentModel');
 
+
+    public function PaymentDetail()
+    {
+        return $this->hasMany(PaymentDetailModel::class);
     }
+    public function MyPaymentDetail(){
+        return $this->belongsTo(PaymentDetailModel::class, 'Payment_Detail_model_id');
+    }
+    public function User(){
+        return $this->belongsTo(UserModel::class, 'user_model_id');
+    }
+
     public function CreatePayment()
     {
     }

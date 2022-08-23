@@ -8,7 +8,11 @@ class PaymentDetailModel extends PaymentDetailEntity
 {
     protected $table = 'payment_details';
 
-    public function MyPayment(){
-        return $this->belongsTo('App\Model\PaymentModel');
+    public function Payment(){
+        return $this->belongsTo(PaymentModel::class, 'payment_model_id');
     }
+    public function User(){
+        return $this->belongsTo(UserModel::class, 'user_model_id');
+    }
+
 }
