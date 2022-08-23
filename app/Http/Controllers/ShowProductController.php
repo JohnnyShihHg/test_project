@@ -18,4 +18,6 @@ class ShowProductController extends Controller
     public function GetAllProducts(){
         return $this->service->GetAllProducts();
     }
+
+
 }

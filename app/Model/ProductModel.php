@@ -39,5 +39,7 @@ class ProductModel extends ProductEntity
 
     public function GetAllProducts(){
         return ProductModel::with('ProductCategory')->get();
+
+        // return 'hello';
     }
 }
