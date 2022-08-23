@@ -21,10 +21,10 @@ use Faker\Generator as Faker;
 
 $factory->define(UserModel::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->freeEmail,
-        'phone' => $faker->phoneNumber,
-        'password' => 'thisisatest', // password
+        'name' => 'test1',
+        'email' => 'test@example.com',
+        'phone' => '0090000123',
+        'password' => 'thisisatest', // password 不進行hash 
 
     ];
 });

@@ -20,17 +20,18 @@ class ProductService
 
 
 
-    public function GetProduct()
-    {
-        /* 理應實現邏輯後調用方法 */
-        return $this->product->show();
+    // public function GetProduct()
+    // {
+    //     /* 理應實現邏輯後調用方法 */
+    //     return $this->product->show();
 
 
-    }
+    // }
 
     public function GetAllProducts()
     {
         return $this->product->GetAllProducts();
+        // return 'hello';
     }
 
 }

@@ -4,24 +4,20 @@ namespace App\Model;
 
 use App\Entities\PaymentEntity;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Model;
 
-class PaymentModel extends PaymentEntity
+
+class PaymentModel extends Model
 {
     use SoftDeletes;
-    protected $table = 'payments';
+    protected $payment;
 
-
-
-    public function PaymentDetail()
+    public function __construct(PaymentEntity $PaymentEntity)
     {
-        return $this->hasMany(PaymentDetailModel::class);
+        $this->payment = $PaymentEntity;
     }
-    public function MyPaymentDetail(){
-        return $this->belongsTo(PaymentDetailModel::class, 'Payment_Detail_model_id');
-    }
-    public function User(){
-        return $this->belongsTo(UserModel::class, 'user_model_id');
-    }
+
+  
 
     public function CreatePayment()
     {

@@ -3,16 +3,16 @@
 namespace App\Model;
 
 use App\Entities\PaymentDetailEntity;
+use Illuminate\Database\Eloquent\Model;
 
-class PaymentDetailModel extends PaymentDetailEntity
+class PaymentDetailModel extends Model
 {
-    protected $table = 'payment_details';
+    protected $PaymentDetail;
 
-    public function Payment(){
-        return $this->belongsTo(PaymentModel::class, 'payment_model_id');
+    public function __construct(PaymentDetailEntity $PaymentDetailEntity)
+    {
+        $this->paymentdetail = $PaymentDetailEntity;
     }
-    public function User(){
-        return $this->belongsTo(UserModel::class, 'user_model_id');
-    }
+
 
 }

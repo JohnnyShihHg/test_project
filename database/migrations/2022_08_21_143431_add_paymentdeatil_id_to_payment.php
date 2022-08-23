@@ -15,7 +15,7 @@ class AddPaymentdeatilIdToPayment extends Migration
     {
         Schema::table('payments', function (Blueprint $table) {
         $table->integer('user_model_id')->nullable();
-        $table->integer('payment_detail_model_id')->nullable();
+        // $table->integer('payment_detail_model_id')->nullable();
 
         });
     }

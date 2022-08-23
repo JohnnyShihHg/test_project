@@ -7,20 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 use App\Entities\ProductEntity;
 
 
-class ProductModel extends ProductEntity
+class ProductModel extends Model
 {
-    protected $table = 'products';
+    protected $products;
 
-    /* 
-        一個商品種類會有很多個商品，
-        相對的一個商品只會有一個商品種類，
-        例如商品種類叫做飲料，會有紅茶綠茶等商品，
-        而紅茶只會有一個商品種類叫做飲料。
-    */
-    public function ProductCategory()
+    public function __construct(ProductEntity $ProductEntity)
     {
-        return $this->belongsTo(ProductCategoryModel::class,'product_category_model_id');
+        $this->products = $ProductEntity;
     }
+
+  
 
 
     /* 理應接收 http request 生成資料*/
@@ -38,9 +34,9 @@ class ProductModel extends ProductEntity
         return ProductEntity::all();
     }
 
-    public function GetAllProducts(){
-        return ProductModel::with('ProductCategory')->get();
-
-        // return 'hello';
+    public function GetAllProducts()
+    {
+        return $this->products::with('ProductCategory')->get();
+        // return 'hello壓力山大';
     }
 }
