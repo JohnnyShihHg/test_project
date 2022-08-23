@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('phone');
+            /* 錯誤不能設定成為一 */
             $table->string('email');
             $table->timestamps();
             $table->softDeletes();
