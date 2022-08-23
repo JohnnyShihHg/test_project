@@ -24,5 +24,5 @@ Route::get('/test', function () {
 
 Route::get('/test2', 'ProductController@GetProduct');
 
-Route::get('/category', 'ShowProductController@GetAllProducts');
+Route::get('/product', 'ShowProductController@GetAllProducts');
 
