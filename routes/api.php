@@ -21,8 +21,19 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/test', function () {
     return App\Model\ProductModel::all();
 });
-
 Route::get('/test2', 'ProductController@GetProduct');
 
-Route::get('/product', 'ShowProductController@GetAllProducts');
+
+
+/* 所有商品 */
+Route::get('/product', 'ProductController@GetAllProducts');
+/* 所有訂單 */
+Route::get('/payment', 'PaymentController@home');
+/* 訂單細節 */
+Route::get('/payment/detail', 'PaymentController@home');
+/* 建立訂單 */
+Route::post('/payment/order', 'PaymentController@home');
+
+
+
 
