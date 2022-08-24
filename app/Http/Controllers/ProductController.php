@@ -12,7 +12,7 @@ class ProductController extends Controller
 
     public function __construct(ProductService $ProductService)
     {
-        $this->service = $ProductService;
+       return $this->service = $ProductService;
     }
 
     public function GetAllProducts(){

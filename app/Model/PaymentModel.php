@@ -17,9 +17,8 @@ class PaymentModel extends Model
         $this->payment = $PaymentEntity;
     }
 
-  
-
-    public function CreatePayment()
+    public function show()
     {
+        return 'this is a payment';
     }
 }
