@@ -15,10 +15,10 @@ class PaymentEntity extends Model
     }
     public function MyPaymentDetail()
     {
-        return $this->belongsTo(paymentdetail::class, 'Payment_Detail_model_id');
+        return $this->belongsTo(paymentdetail::class, 'Payment_Detail_entity_id');
     }
     public function User()
     {
-        return $this->belongsTo(UserModel::class, 'user_model_id');
+        return $this->belongsTo(UserModel::class, 'user_entity_id');
     }
 }

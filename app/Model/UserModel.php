@@ -9,9 +9,9 @@ class UserModel extends Model
 {
     protected $user;
 
-    public function __construct(UserEntity $userEntity)
+    public function __construct(UserEntity $UserEntity)
     {
-        $this->user = $userEntity;
+        $this->user = $UserEntity;
     }
 
 
@@ -23,6 +23,6 @@ class UserModel extends Model
             'email' => $email,
             'password' => $password
         ];
-        UserEntity::create($data);
+        $this->user::create($data);
     }
 }

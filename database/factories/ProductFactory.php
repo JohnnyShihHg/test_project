@@ -2,11 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-// use App\Entities\ProductEntity;
-use App\Model\ProductModel;
+use App\Entities\ProductEntity;
 use Faker\Generator as Faker;
 
-$factory->define(ProductModel::class, function (Faker $faker) {
+$factory->define(ProductEntity::class, function (Faker $faker) {
     $choose = [
         '紅茶',
         '蘋果',

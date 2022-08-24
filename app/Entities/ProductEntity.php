@@ -22,6 +22,6 @@ class ProductEntity extends Model
     */
     public function ProductCategory()
     {
-        return $this->belongsTo(ProductCategoryEntity::class,'product_category_model_id');
+        return $this->belongsTo(ProductCategoryEntity::class,'product_category_entity_id');
     }
 }

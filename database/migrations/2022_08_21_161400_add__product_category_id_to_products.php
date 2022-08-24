@@ -14,7 +14,7 @@ class AddProductCategoryIdToProducts extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->integer('product_category_model_id')->nullable();
+            $table->integer('product_category_entity_id')->nullable();
        
         });
     }

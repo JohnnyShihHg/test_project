@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
     {
         /* 可以直接用 Factory 的資料來創建 */
         /* laravel6 語法 */
-        factory(App\Model\UserModel::class,2)->create();
+        factory(App\Entities\UserEntity::class,2)->create();
         
         // App\Entities\UserEntity::factory(3)->create(); ← Laravel8
 

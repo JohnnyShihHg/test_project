@@ -16,12 +16,12 @@ class ProductSeeder extends Seeder
     */
     public function run()
     {
-        $productcategory = factory(App\Model\ProductCategoryModel::class)
+        $productcategory = factory(App\Entities\ProductCategoryEntity::class)
             ->create()
             ->each(function ($productcategory) {
                 $productcategory
                     ->Products()
-                    ->save(factory(App\Model\ProductModel::class)
+                    ->save(factory(App\Entities\ProductEntity::class)
                         ->make());
             });
     }

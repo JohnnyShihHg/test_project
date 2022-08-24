@@ -11,7 +11,7 @@ class UserEntity  extends Model
     protected $table = 'users';
 
     protected $fillable = [
-        'name', 'phone', 'e-mail'
+        'name', 'phone', 'email','password'
     ];
 
     public function Payment()
