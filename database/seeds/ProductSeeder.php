@@ -16,7 +16,7 @@ class ProductSeeder extends Seeder
     */
     public function run()
     {
-        $productcategory = factory(App\Entities\ProductCategoryEntity::class)
+        $productcategory = factory(App\Entities\ProductCategoryEntity::class,2)
             ->create()
             ->each(function ($productcategory) {
                 $productcategory

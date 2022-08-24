@@ -31,18 +31,19 @@ Route::get('/user','UserController@UserIndex');
 /* 特定用戶 */
 Route::get('/user/{id}','UserController@OrderUserIndex');
 /* 編輯用戶 null不能用 */
-Route::put('/user/{id}/edit','UserController@EditUser');
-
-/* 註冊 */
-Route::post('/user/create','UserController@CreateUser');
+Route::put('/user/{id}','UserController@EditUser');
+/* 用戶登入 */
+Route::post('/user','UserController@Login');
+/* 用戶註冊 */
+Route::post('/user/signup','UserController@CreateUser');
 /* 所有商品 */
 Route::get('/product', 'ProductController@GetAllProducts');
 /* 所有訂單 */
 Route::get('/payment', 'PaymentController@GetPayment');
 /* 訂單細節 */
-Route::get('/payment/detail', 'PaymentController@home');
+Route::get('/payment/{id}', 'PaymentController@home');
 /* 建立訂單 */
-Route::post('/payment/order', 'PaymentController@home');
+Route::post('/payment', 'PaymentController@home');
 
 
 
