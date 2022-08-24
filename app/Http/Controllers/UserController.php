@@ -13,6 +13,7 @@ class UserController extends Controller
     public function __construct(UserService $UserService)
     {
         $this->user = $UserService;
+        // $this->middleware('auth:api', ['except' => ['login']]);
     }
 
     public function CreateUser(Request $request)
@@ -28,16 +29,22 @@ class UserController extends Controller
 
     public function EditUser(Request $request, $id)
     {
-        return $this->user->EditUser($request->all(),$id);
+        return $this->user->EditUser($request->all(), $id);
     }
 
     public function UserIndex()
     {
         return $this->user->UserIndex();
+
     }
 
     public function OrderUserIndex($id)
     {
         return $this->user->OrderUserIndex($id);
     }
+
+    // public function login(Request $request)
+    // {
+    //     return $this->user->login($request);
+    // }
 }

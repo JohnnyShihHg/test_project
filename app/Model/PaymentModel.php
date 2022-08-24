@@ -17,8 +17,34 @@ class PaymentModel extends Model
         $this->payment = $PaymentEntity;
     }
 
-    public function show()
+    public function GetAllPayment()
     {
-        return 'this is a payment';
+        return $this->payment::all();
+    }
+
+    public function GetUserPayment($uid)
+    {
+        //可以更好找出商品名稱多建立一層關係
+        $order = $this->payment::with('PaymentDetail')->where('user_entity_id', $uid)->get();
+        return $order;
+    }
+    public function GetUserPaymentOrder($uid,$id)
+    {
+        $order = $this->payment::with('PaymentDetail')->where('user_entity_id', $uid)->get();
+        return $order[$id-1];
+    }
+    public function MakeRLS($lastPayment, $lastPaymentDetail)
+    {
+
+        return $lastPayment->PaymentDetail()->save($lastPaymentDetail);
+    }
+
+    public function CreatePayment($request)
+    {
+        return $this->payment::create($request);
+    }
+    public function PaymentOrder()
+    {
+        return $this->payment::latest('updated_at')->first();
     }
 }

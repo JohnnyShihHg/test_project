@@ -39,4 +39,7 @@ class ProductModel extends Model
         return $this->products::with('ProductCategory')->get();
         // return 'hello壓力山大';
     }
+
+    
+
 }

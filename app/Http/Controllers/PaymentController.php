@@ -14,13 +14,21 @@ class PaymentController extends Controller
     {
         $this->payments = $PaymentService;
     }
-    public function home()
+    public function GetUserPayment($name)
     {
-        return 'payment';
+        return $this->payments->GetUserPayment($name);
+    }
+    public function GetUserPaymentOrder($name,$id)
+    {
+        return $this->payments->GetUserPaymentOrder($name,$id);
+    }
+    public function GetAllPayment()
+    {
+        return $this->payments->GetAllPayment();
     }
 
-    public function GetPayment()
+    public function CreatePayment(Request $request)
     {
-        return $this->payments->GetPayment();
+        return $this->payments->CreatePayment($request);
     }
 }

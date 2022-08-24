@@ -10,15 +10,15 @@ class PaymentDetailEntity extends Model
     protected $table = 'payment_details';
 
     protected $fillable = [
-        'detail', 'phone', 'email'
+        'user_entity_id', 'payment_entity_id', 'product'
     ];
 
     public function Payment()
     {
-        return $this->belongsTo(PaymentModel::class, 'payment_entity_id');
+        return $this->belongsTo(PaymentEntity::class, 'payment_entity_id');
     }
     public function User()
     {
-        return $this->belongsTo(UserModel::class, 'user_entity_id');
+        return $this->belongsTo(UserEntity::class, 'user_entity_id');
     }
 }

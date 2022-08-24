@@ -15,7 +15,7 @@ class CreatePaymentTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('total');
+            $table->decimal('total');
             $table->string('paymentstatus');
             $table->timestamps();
             $table->softDeletes();

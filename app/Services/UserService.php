@@ -41,4 +41,23 @@ class UserService
     {
         return   $this->user->OrderUserIndex($id);
     }
+
+    // public function login( $request)
+    // {
+    //     $pass = $request->only(['name', 'email']);
+    //     // $token = auth()->attempt($pass);
+    //     if (!$token = auth()->attempt($pass)) {
+    //         return response()->json(['error' => 'Incorrect name/email'], 401);
+    //     }
+    //     return response()->json(['token' => $token]);
+    // }
+    public function getJWTIdentifier()
+    {
+        return $this->user->getJWTIdentifier();
+    }
+
+    public function getJWTCustomClaims()
+    {
+        return $this->user->getJWTCustomClaims();
+    }
 }

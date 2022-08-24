@@ -19,8 +19,15 @@ use Faker\Generator as Faker;
 */
 
 $factory->define(UserEntity::class, function (Faker $faker) {
+    $choose = [
+        'test1',
+        'test2',
+        'test3',
+        'test4',
+    ];
+    $key = rand(0, 3);
     return [
-        'name' => 'test1',
+        'name' => "$choose[$key]",
         'email' => 'test@example.com',
         'phone' => '0090000123',
         'password' => 'thisisatest', // password 不進行hash 

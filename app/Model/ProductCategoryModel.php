@@ -18,10 +18,14 @@ class ProductCategoryModel extends Model
         $this->productcategorys = $ProductCategoryEntity;
     }
 
-   
-
     public function CreateProductCategory($data)
     {
         ProductCategoryEntity::create($data);
+    }
+
+    public function GetTotal($id)
+    {
+        return $this->productcategorys::find($id)->price;
+        // return 'hello壓力山大';
     }
 }
